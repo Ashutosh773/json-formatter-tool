@@ -29,3 +29,107 @@ pre {
     text-align: left;
     overflow: auto;
 }
+
+
+header {
+    background: #222;
+    padding: 15px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+
+h1, h2 {
+    color: white;
+}
+/* FULL SCREEN CENTER */
+.center-wrapper {
+    height: 100vh;
+    display: flex;
+    justify-content: center;  /* horizontal center */
+    align-items: center;      /* vertical center */
+    padding: 20px;
+}
+/* Center form */
+.form-container {
+    display: flex;
+    justify-content: center;
+    padding: 40px 15px;
+}
+
+/* Form box */
+form {
+    background: #fff;
+    padding: 25px;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Inputs */
+.form-control {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0 18px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+/* Button */
+button {
+    width: 100%;
+    padding: 12px;
+    background: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0056b3;
+}
+label {
+    display: block;
+    margin-bottom: 0px;
+    font-weight: bold;
+    color: #333;
+}
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+    form {
+        padding: 18px;
+    }
+
+    .form-control {
+        font-size: 14px;
+    }
+}
+🚀 Features you
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #222;
+    color: white;
+    margin-top: 40px;
+}
