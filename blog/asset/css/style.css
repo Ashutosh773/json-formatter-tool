@@ -1,0 +1,192 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #1f1c2c, #928dab);
+    color: #fff;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    backdrop-filter: blur(10px);
+    background: rgba(255,255,255,0.05);
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+nav a {
+    color: #fff;
+    margin-left: 20px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #00ffd5;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.hero h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    opacity: 0.8;
+}
+
+/* Blog Grid */
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 40px;
+}
+
+body {
+    font-family: Arial;
+    background: #0f172a;
+    color: white;
+    text-align: center;
+	}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+textarea {
+    width: 100%;
+    height: 200px;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+button {
+    margin: 10px;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+pre {
+    background: #1e293b;
+    padding: 15px;
+    text-align: left;
+    overflow: auto;
+}
+
+
+header {
+    background: #222;
+    padding: 15px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+
+h1, h2 {
+    color: white;
+}
+/* FULL SCREEN CENTER */
+.center-wrapper {
+    height: 100vh;
+    display: flex;
+    justify-content: center;  /* horizontal center */
+    align-items: center;      /* vertical center */
+    padding: 20px;
+}
+/* Cards */
+.card {
+    background: rgba(255,255,255,0.08);
+    border-radius: 15px;
+    padding: 20px;
+    backdrop-filter: blur(15px);
+    transition: 0.3s;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.02);
+}
+
+.card h3 {
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+.card a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #00ffd5;
+    text-decoration: none;
+}
+.post-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 25px;
+    background: rgba(255,255,255,0.08);
+    border-radius: 15px;
+}
+
+.post-container h1 {
+    margin-bottom: 10px;
+}
+
+.post-content h2 {
+    margin-top: 20px;
+}
+
+.post-content ul {
+    margin-left: 20px;
+}
+
+.post-content pre {
+    background: #111;
+    padding: 10px;
+    border-radius: 8px;
+    overflow-x: auto;
+}
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    background: rgba(255,255,255,0.05);
+}

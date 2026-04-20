@@ -3,7 +3,7 @@ body {
     background: #0f172a;
     color: white;
     text-align: center;
-}
+	}
 
 .container {
     width: 80%;
@@ -66,6 +66,44 @@ h1, h2 {
     align-items: center;      /* vertical center */
     padding: 20px;
 }
+/* Glass Info Card */
+.glass-box {
+    max-width: 500px;
+    margin: 30px auto;
+    padding: 25px;
+    border-radius: 18px;
+
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    border: 1px solid rgba(255,255,255,0.25);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+
+    color: #fff;
+}
+
+/* Section titles */
+.glass-box h3 {
+    margin-bottom: 12px;
+    font-size: 18px;
+}
+
+/* Info text */
+.glass-box p {
+    font-size: 14px;
+    margin: 8px 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Hover effect */
+.glass-box:hover {
+    transform: translateY(-5px);
+    transition: 0.3s ease;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+}
 /* Center form */
 .form-container {
     display: flex;
@@ -114,6 +152,93 @@ label {
     margin-bottom: 0px;
     font-weight: bold;
     color: #333;
+}
+.about-subtitle {
+    font-size: 18px;
+    color: white;
+    margin-bottom: 25px;
+}
+
+.about-text {
+    font-size: 16px;
+    color: white;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.highlight {
+    color: #007BFF;
+    font-weight: 600;
+}
+
+.mission-box {
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+    color: #fff;
+}
+
+.mission-title {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.section-container {
+    max-width: 900px;
+    margin: 40px auto;
+    font-family: 'Segoe UI', sans-serif;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.tools-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.tool-card {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    width: 220px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    transition: 0.3s ease;
+}
+
+.tool-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+}
+
+.tool-icon {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.tool-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #222;
+}
+
+.why-box {
+    margin-top: 40px;
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
+    padding: 25px;
+    border-radius: 12px;
+    color: white;
+}
+
+.why-text {
+    font-size: 16px;
+    margin-top: 10px;
 }
 /* Mobile responsiveness */
 @media (max-width: 600px) {
