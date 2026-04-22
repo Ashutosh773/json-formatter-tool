@@ -121,7 +121,6 @@ button {
     font-size: 16px;
     cursor: pointer;
 }
-
 button:hover {
     background: #0056b3;
 }
@@ -139,7 +138,6 @@ label {
     max-width: 1000px;
     margin: auto;
 }
-
 /* Glass UI */
 .glass-box {
     flex: 1;
