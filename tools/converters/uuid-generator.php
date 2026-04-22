@@ -1,27 +1,56 @@
+<?php
+// ---------- UUID GENERATION ----------
+function generateUUIDv4() {
+    $data = random_bytes(16);
+
+    // Version 4
+    $data[6] = chr((ord($data[6]) & 0x0f) | 0x40);
+    // Variant
+    $data[8] = chr((ord($data[8]) & 0x3f) | 0x80);
+
+    return vsprintf('%s%s-%s-%s-%s-%s%s%s', str_split(bin2hex($data), 4));
+}
+
+// ---------- HANDLE REQUEST ----------
+$uuidList = [];
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $count = intval($_POST['count'] ?? 1);
+
+    // Limit for safety
+    if ($count < 1) $count = 1;
+    if ($count > 1000) $count = 1000;
+
+    for ($i = 0; $i < $count; $i++) {
+        $uuidList[] = generateUUIDv4();
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>JSON to SQL Converter Tool</title>
-<meta name="title" content="JSON Formatter & Validator Online Free">
-<meta name="description" content="Free online JSON formatter, validator and minifier tool. Beautify JSON instantly with our fast and easy tool.">
-<meta name="keywords" content="json formatter, json validator, json beautifier, format json online, json pretty print, json minify, json viewer, free json tool, developer tools">
-<meta name="author" content="Ashutosh Shirole">
+<title>UUID Generator (v4)</title>
 
-<meta property="og:title" content="JSON Formatter & Validator">
-<meta property="og:description" content="Format, validate and minify JSON online instantly.">
-<meta property="og:type" content="website">
-<meta name="robots" content="index, follow">
+<meta name="description" content="Generate UUID v4 online free. Create multiple unique IDs instantly.">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <link rel="stylesheet" href="../../css/style.css">
-<link rel="icon" href="../../assets/img/search.png">
 <link rel="stylesheet" href="../../tools/converters/assets/css/style.css">
+<link rel="icon" href="../../assets/img/search.png">
+
+</head>
+
+<body>
+
+<!-- HEADER -->
 <header>
-  <nav>
-    <h1>JSON Formatter & Validator</h1>
+<nav>
+    <h1>JSON Tools</h1>
     <ul>
-      <li><a href="../../index.html">Home</a></li>
-	  <!-- 🔽 TOOLS DROPDOWN -->
+        <li><a href="../../index.html">Home</a></li>
+
       <li class="dropdown">
        <a href="#" class="tools-link">Tools</a>
  
@@ -42,18 +71,15 @@
 
         </div>
       </li>
-	  <li><a href="../../blog/index.html">Blog</a></li>
-	  <li><a href="../../about-us.html">About Us</a></li>
-      <li><a href="../../contact-us.html">Contact Us</a></li>
-      
+
+        <li><a href="../../blog/index.html">Blog</a></li>
+        <li><a href="../../about-us.html">About Us</a></li>
+        <li><a href="../../contact-us.html">Contact Us</a></li>
     </ul>
-  </nav>
- </header>
-</head>
+</nav>
+</header>
 
-<body>
-
-
+<!-- MAIN -->
 <div class="container">
 
 <h2>UUID Generator (v4)</h2>
@@ -61,7 +87,9 @@
 <form method="POST">
 
 <label class="label">Number of UUIDs:</label>
-<input type="number" name="count" value="<?php echo $_POST['count'] ?? 1; ?>" min="1" max="1000">
+<input type="number" name="count" 
+       value="<?php echo htmlspecialchars($_POST['count'] ?? 1); ?>" 
+       min="1" max="1000">
 
 <div class="controls">
     <button type="submit" class="btn">Generate</button>
@@ -77,34 +105,12 @@ if (!empty($uuidList)) {
 
 </form>
 
-
-<?php
-// ---------- UUID v4 GENERATOR ----------
-function generateUUIDv4() {
-    $data = random_bytes(16);
-
-    // Version 4
-    $data[6] = chr((ord($data[6]) & 0x0f) | 0x40);
-    // Variant
-    $data[8] = chr((ord($data[8]) & 0x3f) | 0x80);
-
-    return vsprintf('%s%s-%s-%s-%s-%s%s%s', str_split(bin2hex($data), 4));
-}
-
-// Handle request
-$uuidList = [];
-
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $count = intval($_POST['count'] ?? 1);
-
-    for ($i = 0; $i < $count; $i++) {
-        $uuidList[] = generateUUIDv4();
-    }
-}
-?>
 </div>
+
+<!-- SCRIPT -->
 <script>
-// Copy UUIDs
+
+// Copy
 function copyUUID() {
     let output = document.getElementById("uuidOutput");
     output.select();
@@ -112,7 +118,7 @@ function copyUUID() {
     alert("Copied!");
 }
 
-// Download UUIDs
+// Download
 function downloadUUID() {
     let content = document.getElementById("uuidOutput").value;
     let blob = new Blob([content], { type: "text/plain" });
@@ -121,11 +127,13 @@ function downloadUUID() {
     a.download = "uuids.txt";
     a.click();
 }
+
 </script>
 
-</body>
-
+<!-- FOOTER -->
 <footer>
     <p>© 2026 JSON Formatter & Validator</p>
 </footer>
+
+</body>
 </html>

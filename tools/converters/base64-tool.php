@@ -1,85 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>JSON to SQL Converter Tool</title>
-<meta name="title" content="JSON Formatter & Validator Online Free">
-<meta name="description" content="Free online JSON formatter, validator and minifier tool. Beautify JSON instantly with our fast and easy tool.">
-<meta name="keywords" content="json formatter, json validator, json beautifier, format json online, json pretty print, json minify, json viewer, free json tool, developer tools">
-<meta name="author" content="Ashutosh Shirole">
-
-<meta property="og:title" content="JSON Formatter & Validator">
-<meta property="og:description" content="Format, validate and minify JSON online instantly.">
-<meta property="og:type" content="website">
-<meta name="robots" content="index, follow">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="../../css/style.css">
-<link rel="icon" href="../../assets/img/search.png">
-<link rel="stylesheet" href="../../tools/converters/assets/css/style.css">
-<header>
-  <nav>
-    <h1>JSON Formatter & Validator</h1>
-    <ul>
-      <li><a href="../../index.html">Home</a></li>
-	  <!-- 🔽 TOOLS DROPDOWN -->
-      <li class="dropdown">
-       <a href="#" class="tools-link">Tools</a>
- 
-        <div class="dropdown-content">
-
-          <div class="dropdown-section">
-            <p>Converters</p>
-            <a href="../../tools/converters/json-to-sql.php">🗄️ JSON → SQL</a>
-            <a href="../../tools/converters/json-to-yaml.php">⚙️ JSON → YAML</a>
-            <a href="../../tools/converters/json-to-xml.php">🔄 JSON → XML</a>
-          </div>
-
-          <div class="dropdown-section">
-            <p>Developer</p>
-            <a href="../../tools/converters/base64-tool.php">🔐 Base64 Tool</a>
-            <a href="../../tools/converters/uuid-generator.php">🆔 UUID Generator</a>
-          </div>
-
-        </div>
-      </li>
-	  <li><a href="../../blog/index.html">Blog</a></li>
-	  <li><a href="../../about-us.html">About Us</a></li>
-      <li><a href="../../contact-us.html">Contact Us</a></li>
-      
-    </ul>
-  </nav>
- </header>
-</head>
-
-<body>
-
-<div class="container">
-
-<h2>Base64 Encode / Decode Tool</h2>
-
-<form method="POST">
-
-<!-- Input -->
-<textarea name="input" id="inputText" placeholder="Enter text or Base64 here..."><?php echo htmlspecialchars($_POST['input'] ?? ''); ?></textarea>
-
-<!-- Buttons -->
-<div class="controls">
-    <button class="btn" type="submit" name="action" value="encode">Encode</button>
-    <button class="btn" type="submit" name="action" value="decode">Decode</button>
-    <button class="btn" type="button" onclick="clearAll()">Clear</button>
-    <button class="btn" type="button" onclick="copyOutput()">Copy Output</button>
-    <button class="btn" type="button" onclick="downloadOutput()">Download</button>
-</div>
-
-<!-- Output -->
-<textarea class="output" id="outputText" readonly><?php echo htmlspecialchars($output); ?></textarea>
-
-<div class="status"><?php echo $status; ?></div>
-
-</form>
-
-
 <?php
+// ---------- HANDLE REQUEST FIRST ----------
 $output = "";
 $status = "";
 
@@ -103,16 +23,96 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Base64 Encode / Decode Tool</title>
+
+<meta name="description" content="Encode and decode Base64 online free. Fast and secure Base64 tool.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="../../css/style.css">
+<link rel="stylesheet" href="../../tools/converters/assets/css/style.css">
+<link rel="icon" href="../../assets/img/search.png">
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+<nav>
+    <h1>JSON Tools</h1>
+    <ul>
+        <li><a href="../../index.html">Home</a></li>
+
+      <li class="dropdown">
+       <a href="#" class="tools-link">Tools</a>
+ 
+        <div class="dropdown-content">
+
+          <div class="dropdown-section">
+            <p>Converters</p>
+            <a href="../../tools/converters/json-to-sql.php">🗄️ JSON → SQL</a>
+            <a href="../../tools/converters/json-to-yaml.php">⚙️ JSON → YAML</a>
+            <a href="../../tools/converters/json-to-xml.php">🔄 JSON → XML</a>
+          </div>
+
+          <div class="dropdown-section">
+            <p>Developer</p>
+            <a href="../../tools/converters/base64-tool.php">🔐 Base64 Tool</a>
+            <a href="../../tools/converters/uuid-generator.php">🆔 UUID Generator</a>
+          </div>
+
+        </div>
+      </li>
+
+        <li><a href="../../blog/index.html">Blog</a></li>
+        <li><a href="../../about-us.html">About Us</a></li>
+        <li><a href="../../contact-us.html">Contact Us</a></li>
+    </ul>
+</nav>
+</header>
+
+<!-- MAIN -->
+<div class="container">
+
+<h2>Base64 Encode / Decode Tool</h2>
+
+<form method="POST">
+
+<!-- INPUT -->
+<textarea name="input" id="inputText" placeholder="Enter text or Base64 here..."><?php echo htmlspecialchars($_POST['input'] ?? ''); ?></textarea>
+
+<!-- BUTTONS -->
+<div class="controls">
+    <button class="btn" type="submit" name="action" value="encode">Encode</button>
+    <button class="btn" type="submit" name="action" value="decode">Decode</button>
+    <button class="btn" type="button" onclick="clearAll()">Clear</button>
+    <button class="btn" type="button" onclick="copyOutput()">Copy</button>
+    <button class="btn" type="button" onclick="downloadOutput()">Download</button>
 </div>
 
+<!-- OUTPUT -->
+<textarea class="output" id="outputText" readonly><?php echo htmlspecialchars($output); ?></textarea>
+
+<div class="status"><?php echo $status; ?></div>
+
+</form>
+
+</div>
+
+<!-- SCRIPT -->
 <script>
-// Clear fields
+
+// Clear
 function clearAll() {
     document.getElementById("inputText").value = "";
     document.getElementById("outputText").value = "";
 }
 
-// Copy output
+// Copy
 function copyOutput() {
     let output = document.getElementById("outputText");
     output.select();
@@ -120,7 +120,7 @@ function copyOutput() {
     alert("Copied!");
 }
 
-// Download output
+// Download
 function downloadOutput() {
     let content = document.getElementById("outputText").value;
     let blob = new Blob([content], { type: "text/plain" });
@@ -130,13 +130,15 @@ function downloadOutput() {
     a.click();
 }
 
-// Optional validation highlight
+// Live validation
 document.getElementById("inputText").addEventListener("input", function() {
     let val = this.value.trim();
+
     if (!val) {
         this.style.borderColor = "#ccc";
         return;
     }
+
     try {
         atob(val);
         this.style.borderColor = "green";
@@ -144,10 +146,13 @@ document.getElementById("inputText").addEventListener("input", function() {
         this.style.borderColor = "red";
     }
 });
-</script>
-</body>
 
+</script>
+
+<!-- FOOTER -->
 <footer>
     <p>© 2026 JSON Formatter & Validator</p>
 </footer>
+
+</body>
 </html>
