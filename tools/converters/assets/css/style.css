@@ -15,7 +15,6 @@ header {
     width: 90%;
     margin: 20px auto;
 }
-
 .tool-box {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -57,7 +56,6 @@ textarea {
 .option-box {
     margin-top: 15px;
 }
-
 input[type="text"] {
     padding: 8px;
     width: 200px;
