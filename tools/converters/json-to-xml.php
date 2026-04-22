@@ -29,15 +29,15 @@
 
           <div class="dropdown-section">
             <p>Converters</p>
-            <a href="/json-to-sql">🗄️ JSON → SQL</a>
-            <a href="/json-to-yaml">⚙️ JSON → YAML</a>
-            <a href="/json-to-xml">🔄 JSON → XML</a>
+            <a href="../../tools/converters/json-to-sql.php">🗄️ JSON → SQL</a>
+            <a href="../../tools/converters/json-to-yaml.php">⚙️ JSON → YAML</a>
+            <a href="../../tools/converters/json-to-xml.php">🔄 JSON → XML</a>
           </div>
 
           <div class="dropdown-section">
             <p>Developer</p>
-            <a href="/base64">🔐 Base64 Tool</a>
-            <a href="/uuid">🆔 UUID Generator</a>
+            <a href="../../tools/converters/base64-tool.php">🔐 Base64 Tool</a>
+            <a href="../../tools/converters/uuid-generator.php">🆔 UUID Generator</a>
           </div>
 
         </div>
