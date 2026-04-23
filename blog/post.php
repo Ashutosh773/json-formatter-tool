@@ -11,23 +11,19 @@ $posts = [
             <p>A JSON Formatter is a tool that converts raw JSON into a clean, readable format.</p>
 
             <h2 class="toggle">Why Use JSON Formatter? ⬇</h2>
-            <ul class="toggle-content">
                 <li>Improves readability</li>
                 <li>Helps debug APIs</li>
                 <li>Fixes formatting issues</li>
-            </ul>
 
             <h2>Example</h2>
 
             <div class="code-box">
-                <button class="copy-btn">Copy</button>
                 <pre>{"name":"Ashutosh","age":25}</pre>
             </div>
 
             <p>Formatted Output:</p>
 
             <div class="code-box">
-                <button class="copy-btn">Copy</button>
                 <pre>{
   "name": "Ashutosh",
   "age": 25
@@ -63,11 +59,10 @@ $posts = [
             <p>JSON and XML are both data formats, but JSON is lightweight and faster.</p>
 
             <h2 class="toggle">Key Differences ⬇</h2>
-            <ul class="toggle-content">
                 <li>JSON is faster</li>
                 <li>XML is more verbose</li>
                 <li>JSON is widely used in APIs</li>
-            </ul>
+           
         '
     ],
 	"json-vs-sql" => [
@@ -78,20 +73,16 @@ $posts = [
         <p>JSON and SQL serve different purposes. JSON is a data format, while SQL is used to manage databases.</p>
 
         <h2 class="toggle">Key Differences ⬇</h2>
-        <ul class="toggle-content">
             <li>JSON is lightweight and used in APIs</li>
             <li>SQL is used for querying databases</li>
             <li>JSON stores data, SQL manages data</li>
-        </ul>
-
+     
         <h2>Example</h2>
         <div class="code-box">
-            <button class="copy-btn">Copy</button>
             <pre>{"name":"Ashutosh","age":25}</pre>
         </div>
 
         <div class="code-box">
-            <button class="copy-btn">Copy</button>
             <pre>SELECT * FROM users;</pre>
         </div>
     '
@@ -105,26 +96,22 @@ $posts = [
         <p>JSON and YAML are both used for data representation, but YAML is more human-readable.</p>
 
         <h2 class="toggle">Key Differences ⬇</h2>
-        <ul class="toggle-content">
             <li>JSON uses braces {}, YAML uses indentation</li>
             <li>YAML is easier to read</li>
             <li>JSON is faster for machines</li>
-        </ul>
 
         <h2>Example</h2>
         <div class="code-box">
-            <button class="copy-btn">Copy</button>
             <pre>{"name":"Ashutosh"}</pre>
         </div>
 
         <div class="code-box">
-            <button class="copy-btn">Copy</button>
             <pre>name: Ashutosh</pre>
         </div>
     '
 ],
 
-"encode-decode-guide" => [
+"encodedecode" => [
     "title" => "Base64 Encode & Decode Explained",
     "date" => "April 2026",
     "read_time" => "4 min read",
@@ -132,21 +119,18 @@ $posts = [
         <p>Base64 encoding converts data into a readable string format for safe transmission.</p>
 
         <h2 class="toggle">Why Use Base64? ⬇</h2>
-        <ul class="toggle-content">
             <li>Safe data transfer</li>
             <li>Used in APIs and authentication</li>
             <li>Encodes binary data</li>
-        </ul>
 
         <h2>Example</h2>
         <div class="code-box">
-            <button class="copy-btn">Copy</button>
             <pre>Hello → SGVsbG8=</pre>
         </div>
     '
 ],
 
-"uuid-generator-guide" => [
+"uuid-generator" => [
     "title" => "UUID Generator: What & Why?",
     "date" => "April 2026",
     "read_time" => "4 min read",
@@ -154,20 +138,16 @@ $posts = [
         <p>A UUID (Universally Unique Identifier) is used to uniquely identify data.</p>
 
         <h2 class="toggle">Why Use UUID? ⬇</h2>
-        <ul class="toggle-content">
             <li>Globally unique</li>
             <li>No collision risk</li>
             <li>Used in distributed systems</li>
-        </ul>
 
         <h2>Example</h2>
         <div class="code-box">
-            <button class="copy-btn">Copy</button>
             <pre>550e8400-e29b-41d4-a716-446655440000</pre>
         </div>
     '
 ],
-
 ];
 
 if (array_key_exists($slug, $posts)) {
