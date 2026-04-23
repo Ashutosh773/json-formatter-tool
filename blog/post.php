@@ -70,12 +70,10 @@ $posts = [
 
         <p><strong>JSON Format:</strong></p>
         <div class="code-box">
-            <button class="copy-btn">Copy</button>
-            <pre>{
-					"name": "Ashutosh",
-					"age": 25
-				}
-			</pre>
+           <pre>{
+  "name": "Ashutosh",
+  "age": 25
+}</pre>
         </div>
 
         <p><strong>XML Format:</strong></p>
