@@ -70,19 +70,15 @@ $posts = [
 
         <p><strong>JSON Format:</strong></p>
         <div class="code-box">
-           <pre>{
-  "name": "Ashutosh",
-  "age": 25
-}</pre>
-        </div>
-
-        <p><strong>XML Format:</strong></p>
+            <pre>{"name":"Ashutosh","age":25}</pre>
+		</div>
+		<p><strong>XML Format:</strong></p>
         <div class="code-box">
             <pre>
-				<user>
-					<name>Ashutosh</name>
-					<age>25</age>
-				</user>
+				&lt;user&gt;
+				&lt;name&gt;Ashutosh&lt;/name&gt;
+				&lt;age&gt;25&lt;/age&gt;
+				&lt;/user&gt;
             </pre>
         </div>
 
