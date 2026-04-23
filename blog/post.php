@@ -51,20 +51,50 @@ $posts = [
         '
     ],
 
-    "json-vs-xml" => [
-        "title" => "JSON vs XML",
-        "date" => "April 2026",
-        "read_time" => "6 min read",
-        "content" => '
-            <p>JSON and XML are both data formats, but JSON is lightweight and faster.</p>
+"json-vs-xml" => [
+    "title" => "JSON vs XML",
+    "date" => "April 2026",
+    "read_time" => "6 min read",
+    "content" => '
+        <p>JSON and XML are both data formats, but JSON is lightweight, faster, and widely used in modern APIs.</p>
 
-            <h2 class="toggle">Key Differences ⬇</h2>
-                <li>JSON is faster</li>
-                <li>XML is more verbose</li>
-                <li>JSON is widely used in APIs</li>
-           
-        '
-    ],
+        <h2 class="toggle">Key Differences ⬇</h2>
+        <ul class="toggle-content">
+            <li>JSON is faster and lightweight</li>
+            <li>XML is more verbose with tags</li>
+            <li>JSON is easier to parse in JavaScript</li>
+            <li>XML supports attributes and namespaces</li>
+        </ul>
+
+        <h2>Example Comparison</h2>
+
+        <p><strong>JSON Format:</strong></p>
+        <div class="code-box">
+            <button class="copy-btn">Copy</button>
+            <pre>{
+					"name": "Ashutosh",
+					"age": 25
+				}
+			</pre>
+        </div>
+
+        <p><strong>XML Format:</strong></p>
+        <div class="code-box">
+            <pre>
+				<user>
+					<name>Ashutosh</name>
+					<age>25</age>
+				</user>
+            </pre>
+        </div>
+
+        <h2>When to Use What?</h2>
+        <ul>
+            <li>Use JSON for APIs and web apps</li>
+            <li>Use XML for legacy systems or document-heavy data</li>
+        </ul>
+		'
+],
 	"json-vs-sql" => [
     "title" => "JSON vs SQL: Key Differences Explained",
     "date" => "April 2026",
