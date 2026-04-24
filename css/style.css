@@ -269,6 +269,69 @@ label {
     font-size: 16px;
     margin-top: 10px;
 }
+.tool-content {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.tool-content h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.tool-content h2 {
+  margin-top: 25px;
+  color: #007bff;
+}
+
+.tool-content pre {
+  background: #222;
+  padding: 15px;
+  border-radius: 5px;
+  overflow-x: auto;
+}
+
+.tool-content ul,
+.tool-content ol {
+  margin-left: 20px;
+}
+.json-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.grid-box {
+  background: #222;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  transition: 0.3s ease;
+}
+
+.grid-box:hover {
+  transform: translateY(-5px);
+}
+
+.grid-box h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.grid-box ul,
+.grid-box ol {
+  padding-left: 18px;
+}
+
+.grid-box li {
+  margin-bottom: 6px;
+}
 /* Mobile responsiveness */
 @media (max-width: 600px) {
     form {
